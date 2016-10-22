@@ -38,30 +38,30 @@ namespace Arreyer
             {
                 Console.WriteLine(inläst[i]);
             }
-            Console.ReadKey();           
+            Console.ReadKey();                      
+            */
             //Övning 3
-            */            
+            /*
             int[] numbArrey = { 12, 5, 6, 1, 2, 3, -2, -7, 0 };
-            int störst = 0;
+            int utskrift;
             for (int i = 0; i < numbArrey.Length; i++)
             {
-                for (int x = 1; x < numbArrey.Length-1; x++)
+                for (int x = i; x < numbArrey.Length; x++)
                 {
-                    if (numbArrey[i] < numbArrey[x + 1])
+                    if (numbArrey[i] > numbArrey[x])
                     {
-                        störst = numbArrey[x+1];
-                        numbArrey[x+1] = numbArrey[x];
-                        numbArrey[x] = störst;
+                        utskrift = numbArrey[i];
+                        numbArrey[i] = numbArrey[x];
+                        numbArrey[x] = utskrift;  
                     }
-                }
-                
+                }                         
             }
-            for (int i = 0; i < numbArrey.Length; i++)
+            for (int i = numbArrey.Length -1; i > -1; i--)
             {
                 Console.WriteLine(numbArrey[i] + " ");
             }
             Console.ReadKey();
-
+            */
         }//static
     }
 }
