@@ -43,25 +43,62 @@ namespace Arreyer
             //Övning 3
             /*
             int[] numbArrey = { 12, 5, 6, 1, 2, 3, -2, -7, 0 };
-            int utskrift;
+            int bytPlats;
             for (int i = 0; i < numbArrey.Length; i++)
             {
-                for (int x = i; x < numbArrey.Length; x++)
+                for (int j = i; j < numbArrey.Length; j++)
                 {
-                    if (numbArrey[i] > numbArrey[x])
+                    if (numbArrey[i] > numbArrey[j])
                     {
-                        utskrift = numbArrey[i];
-                        numbArrey[i] = numbArrey[x];
-                        numbArrey[x] = utskrift;  
+                        bytPlats = numbArrey[i];
+                        numbArrey[i] = numbArrey[j];
+                        numbArrey[j] = bytPlats;
                     }
-                }                         
+                }
             }
-            for (int i = numbArrey.Length -1; i > -1; i--)
+            for (int k = numbArrey.Length - 1; 0 < k; k--)
             {
-                Console.WriteLine(numbArrey[i] + " ");
+                Console.WriteLine(numbArrey[k] + " ");
             }
             Console.ReadKey();
             */
+            //Övning 4
+            /*
+            string[] names = new string[] { "Citron", "Apple", "Cocos", "Banan", "Andre", "Dadel", "Aprikos" };
+            string bytPlats;
+            for (int i = 0; i < names.Length; i++)
+            {
+                for (int j = i; j < names.Length; j++)
+                {
+                    if (names[i].CompareTo(names[j]) > 0)
+                    {
+                        bytPlats = names[i];
+                        names[i] = names[j];
+                        names[j] = bytPlats; 
+                    }
+                }
+            }
+            for (int k = 0; k < names.Length; k++)
+            {
+                Console.WriteLine(names[k] + " ");
+            }
+            Console.ReadKey();
+            */
+            //Övning 5
+            string[] names = new string[] { "Citron", "Apple", "Cocos", "Banan", "Andre", "Dadel", "Aprikos" };
+            string bytPlats;
+            foreach (string i in names)
+            {
+                foreach (string j in names)
+                {
+                    if (names[i].CompareTo(names[j]) > 0)
+                    {
+                        bytPlats = names[i];
+                        names[i] = names[j];
+                        names[j] = bytPlats;
+                    }
+                }
+            }
         }//static
     }
 }
