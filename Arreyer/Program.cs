@@ -85,11 +85,12 @@ namespace Arreyer
             Console.ReadKey();
             */
             //Övning 5
+            /*
             string[] names = new string[] { "Citron", "Apple", "Cocos", "Banan", "Andre", "Dadel", "Aprikos" };
             string bytPlats;
-            foreach (string i in names)
+            for (int i = 0; i < names.Length; i++)
             {
-                foreach (string j in names)
+                for (int j = i; j < names.Length; j++)
                 {
                     if (names[i].CompareTo(names[j]) > 0)
                     {
@@ -99,6 +100,13 @@ namespace Arreyer
                     }
                 }
             }
+            
+            foreach (string k in names)
+            {
+                Console.WriteLine(k);
+            }
+            Console.ReadKey();
+            */
         }//static
     }
 }
